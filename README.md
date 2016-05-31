@@ -1,3 +1,9 @@
+# Ensemble ML algos of:
+
+* NBSVM
+* Paragraph Vector
+* Gated Recurrent Neural Network
+
 ### What is it? ###
 This is the source code of my submission for the Kaggle competition ["Bag of Words Meets Bags of Popcorn"]
 (https://www.kaggle.com/c/word2vec-nlp-tutorial). The leader board score is 0.9766.
