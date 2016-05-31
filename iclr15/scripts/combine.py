@@ -11,8 +11,10 @@ def normalize(data):
     return data / norm
 
 def load(e, classifiers=["RNNLM", "PARAGRAPH", "NBSVM"], path="scores"):
-    """ returns an array containing the scores of the specified classifiers.
-    Note that we center the scores to 0."""
+    """ 
+    returns an array containing the scores of the specified classifiers.
+    Note that we center the scores to 0.
+    """
     assert e in ["TEST", "VALID"]
     probas = []
     for c in classifiers:
@@ -30,7 +32,8 @@ def load(e, classifiers=["RNNLM", "PARAGRAPH", "NBSVM"], path="scores"):
     return (x, y)
 
 def accuracy(k, d):
-    """ d is an array of shape nsamples, nclassifiers
+    """ 
+    d is an array of shape nsamples, nclassifiers
     k is an array of size nclassifiers
     this function return the accuracy of the linear combination
     with k coefficients
@@ -42,9 +45,11 @@ def accuracy(k, d):
     return cnt * 100.
 
 def ensemble(d, classifiers):
-    """ computes the weigths of each ensemble
+    """ 
+    computes the weigths of each ensemble
     according to the contribution of each model
-    on the valid set """
+    on the valid set
+    """
     output = []
     x, y = d
     for i, c in enumerate(classifiers):
